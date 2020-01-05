@@ -21,3 +21,4 @@ class SensorManager:
         """"""
 
         self.camera.take_video()
+

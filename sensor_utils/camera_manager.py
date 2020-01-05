@@ -58,6 +58,7 @@ class CameraManager:
 
     def _update_hour(self):
         """A simple method for updating the self.hour attribute"""
+
         day, hour = str(datetime.datetime.now()).split(' ')
         day = day.replace('-', '_')
         hour = hour.split('.')[0].replace(':', '')
