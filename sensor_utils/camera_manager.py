@@ -36,7 +36,11 @@ class CameraManager:
         self._initalize()
 
     def _initalize(self):
-        """"""
+        """
+        Handles initalization of the CameraManager class.
+        Ensures proper folders for storage.
+        Checks for the camera connections and starts it.
+        """
 
         # Checking to see if the given repo folder can be found
         if not os.path.isdir(self.repo):
@@ -53,7 +57,7 @@ class CameraManager:
         self.camera.resolution = self.resolution
 
     def _update_hour(self):
-        """"""
+        """A simple method for updating the self.hour attribute"""
         day, hour = str(datetime.datetime.now()).split(' ')
         day = day.replace('-', '_')
         hour = hour.split('.')[0].replace(':', '')
@@ -84,7 +88,13 @@ class CameraManager:
             self._update_hour()
 
     def take_video(self):
-        """"""
+        """
+        This method takes video. It works by using methods from the
+        raspberry pi camera module. Simply takes footage of
+        self.video_length seconds. The footage is saved within the
+        self.repo/video folder. Files are names based on the self.hour
+        attribute.
+        """
 
         # Preliminaries of starting the camera, init the counter, and resetting the
         # self.hour attribute
