@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            background-color: #d9d9d9;
+        }
+
+        #top-bar {
+            width: 101vw;
+            height: 10vh;
+            left: -1vw;
+            top: -1vh;
+            background: #3cc47c;
+            position: absolute;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            z-index: 1;
+        }
+
+        #top-bar-info {
+            width: 25vw;
+            height: 8vh;
+            left: 72.5%;
+            top: 10%;
+            background: #3cc47c;
+            position: absolute;
+            z-index: 2;
+        }
+
+        #time-info {
+            text-align: center;
+            position: absolute;
+            font-size: 35px;
+            top: 25%;
+            left: 12%;
+            z-index: 3;
+        }
+
+        #top-bar-logo {
+            width: 25vw;
+            height: 8vh;
+            left: 2%;
+            top: 10%;
+            background: #cc47c;
+            position: absolute;
+            z-index: 2;
+        }
+
+        #logo-info {
+            text-align: center;
+            position: absolute;
+            font-size: 35px;
+            top: 25%;
+            left: 12%;
+            z-index: 3;
+        }
+
+        #temperature {
+            width: 40vw;
+            height: 20vh;
+            left: 2%;
+            top: 15%;
+            background: #3cc47c;
+            position: absolute;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            z-index: 1;
+        }
+
+        div.polaroid {
+            position: absolute;
+            top: 15%;
+            left: 2%;
+            width: 30%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+        }
+
+        div.container {
+          padding: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="parent">
+        <div id="top-bar">
+            <div id="top-bar-info">
+                <div id="time-info"> {{ current_time }} </div>
+            </div>
+            <div id="top-bar-logo">
+                <div id="logo-info">Autogardener</div>
+            </div>
+        </div>
+
+        <!--<div id="temperature">
+        <div class="polariod">
+            <img src={{plot}} alt="Chart" alt="Norway">
+        </div>-->
+
+        <div class="polaroid">
+            <img src={{plot}} alt="Norway" style="width:100%">
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
